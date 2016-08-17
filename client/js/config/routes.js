@@ -1,5 +1,5 @@
 //Define our routes to render partials
-app.config(function($routeProvider){
+myAppModule.config(function($routeProvider){
    $routeProvider
       .when("/players", {
          //Because our server.js established the location of the static folder,
