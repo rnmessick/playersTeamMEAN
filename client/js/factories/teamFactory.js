@@ -6,12 +6,12 @@ myAppModule.factory("TeamFactory", function(){
   ];
   var factory = {};
   
-    	factory.getTeams = function(callbackFromController){
-    		console.log('got to factory, about to run code from controller')
-      	callbackFromController(teams)
-    	}
+      factory.getTeams = function(callbackFromController){
+        console.log('got to factory, about to run code from controller')
+        callbackFromController(teams)
+      }
 
-    	factory.addTeam = function(newTeam) {
+      factory.addTeam = function(newTeam) {
 
         teams.push(newTeam);
       }
@@ -19,6 +19,6 @@ myAppModule.factory("TeamFactory", function(){
       factory.removeTeam = function($index) {
         teams.splice($index, 1);
       }
-  	
+    
       return factory;
 })
