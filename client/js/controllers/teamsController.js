@@ -2,8 +2,9 @@ myAppModule.controller("TeamsController", function($scope, TeamFactory){
    $scope.teams = [];
 
    //When this controller is loaded, fetch the team list
-   TeamFactory.getTeams(function(teams){
-      $scope.teams = teams;
+   TeamFactory.getTeams(function(teamsFromFactory){
+      console.log('got data from factory, about to attach to $scope')
+      $scope.teams = teamsFromFactory;
    })
 
    //Pass new team info to the TeamFactory
