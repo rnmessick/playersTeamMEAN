@@ -1,9 +1,12 @@
 myAppModule.factory("TeamFactory", function(){
-  teams = [];
+  var teams = ["Seahawks", "Mariners"];
   return {
-    getTeams: function(){
-      return teams;
+    getTeams: function(callbackFromController){
+      console.log('got to factory, about to run code from controller')
+      callbackFromController(teams)
+      // return teams;
     }
+
   }
 
 })
